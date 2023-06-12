@@ -1,0 +1,77 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: black ;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+h1,p,a,li,h2 {
+    color:white
+}
+
+*{
+    box-sizing: border;
+}
+
+.header{
+    color: white;
+    width: 100%;
+    height: 60px;  
+    background-color: #262624;
+    border: 3px solid black;
+    display: flex;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 15%;
+    background-color: #262624;
+    border: 3px solid black;
+}
+
+.content{
+    width: 85%;
+    background-color: black;
+}
+
+.categorie{
+    line-height: 30px;
+    text-align: center;
+}
+
+.dopmenu{
+    display: flex;
+    align-items: flex-end;
+    height: 650px;
+}
+
+.logo{
+    position: relative;
+    left: 30px;
+    top: 0px
+}
+
+.name{
+    font-size: 35;
+    font-weight: 800;
+    position: relative;
+    left: 50px;
+    top: 10px
+}
+
+.authorization{
+    font-size: 35;
+    font-weight: 700;
+    position: relative;
+    top: 10px;
+    right: -800;
+}

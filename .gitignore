@@ -1,0 +1,4 @@
+/venv
+/coolsite/coolsite/__pycache__
+/coolsite/shop/__pycache__
+/coolsite/shop/migrations/__pycache__

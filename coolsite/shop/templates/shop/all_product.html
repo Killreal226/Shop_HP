@@ -1,0 +1,18 @@
+{%extends 'shop/base.html'%}
+{%load static%}
+
+{%block content%}
+<link href="{%static 'shop/css/all_product.css'%}" rel="stylesheet" type="text/css"/>
+<h1>{{title}}</h1>
+<ul>
+    {% for p in list_product %}
+        <h2>{{p.name}}</h2>
+        {%if p.photo %}
+            <img class="photo" src="{{p.photo.url}}" width="200px">
+        {% endif %}
+        <p>{{p.description | truncatewords:3}}</p>
+        <a href="{{  p.get_absolute_url }}">Смотреть подробнее</a>
+        <hr>
+    {%endfor%}
+</ul>
+{%endblock content%}

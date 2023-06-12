@@ -1,0 +1,55 @@
+{%load static%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="{%static 'shop/css/base.css'%}" rel="stylesheet" type="text/css"/>
+</head>
+<body > 
+
+<div class="header" >
+    <a href="{% url 'home' %}"><img class="logo" src="{%static 'shop/images/logo.jpg'%}" width="58px"></a>
+    <div class="name">Diagon Alley</div>
+    <div class="authorization">
+        {%if request.user.is_authenticated%}
+            <div class="last">{{ user.username}} | <a href="{% url 'Logout' %}">Выход</a></div>
+        {%else%}
+            <a href="{% url 'Login' %}">Вход</a>
+            /
+            <a href="{% url 'registration' %}">Регистрация</a>
+        {%endif%}
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidebar">
+        {%block mainmenu%}
+            <h1 class="categorie">Категории</h1>
+                <ul>
+                        <a href="{% url 'all' %}">Все товары</a><br/>  
+                    {% for c in cats %}
+                        <a href="{{ c.get_absolute_url }}">{{c.name}}</a><br/>
+                    {%endfor%}
+                </ul>
+        {%endblock mainmenu%}
+        
+        <br/>
+
+        {%block dopmenu%}
+        <div class="dopmenu">
+            <ul>
+                {% for d in dop_menu%}
+                <a href="{% url d.url_name %}">{{d.title}}</a><br/>
+                {%endfor%}
+            </ul>
+        {%endblock dopmenu%}
+        </div>
+    </div>
+
+    <div class="content">
+    {%block content%}
+    {%endblock content%}
+    </div>
+</div>
+</body>
+</html>

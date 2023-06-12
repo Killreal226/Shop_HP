@@ -1,0 +1,18 @@
+{%extends 'shop/base.html'%}
+{%load static%}
+
+{%block content%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="{%static 'shop/css/home.css'%}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <p class="slogan">Если вам, как и нам в свое время не прилетела сова, тогда наш магазин для вас!</p>
+    <p class="main_art">
+        <img src="{%static 'shop/images/main_art.jpg'%}" width="1000px"> 
+    </p>
+</body>
+</html>
+{%endblock content%}

@@ -1,0 +1,24 @@
+{%extends 'shop/base.html'%}
+{%load static%}
+
+{%block content%}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="{%static 'shop/css/about.css'%}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <p class="slogan">Наш сайт представляет собой альтернативу Косой Аллеи из фильма Гарри Поттер, здесь вы сможете найти самые необычные предметы
+        из мира волшебства и магии, такие как Фантастические животные, Волшебные палочки, Разную одежду из мира волшебства и магии Джоан Роулинг,
+        книги по разным предметам хогвартса и многое другое. Мы предлагаем вам окунуться в мир Гарри Поттера вместе с нами. 
+    </p>
+    <p class="slogan-2">
+        "Шалость удалась"
+    </p>
+    <p class="main_art">
+        <img src="{%static 'shop/images/about.jpg'%}" width="750px"> 
+    </p>
+</body>
+</html>
+{%endblock content%}
